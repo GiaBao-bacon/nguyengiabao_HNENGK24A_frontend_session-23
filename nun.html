@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let n = prompt("Nhập số phần tử muốn nhập : ");
+      let array = [];
+      let flag = 0;
+      for (let i = 0; i < n; i++) {
+        array[i] = prompt(` Nhập phần tử thứ ${i} : `);
+      }
+      for (let i = 0; i < n; i++) {
+        if (!isNaN(array[i])) {
+          console.log(array[i]);
+          flag = 1;
+        }
+      }
+      if (flag == 0) {
+        console.log(` Mảng không có ký tự số !!!`);
+      }
+    </script>
+  </body>
+</html>
