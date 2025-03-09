@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array = [];
+let count = 0;
+
+for (let i=0;i<10;i++){
+    array[i] = +prompt("Nhập giá trị ");
+    if (array[i] == ""){
+        count++;
+    }
+}
+if (count==10){
+    alert("không có số lớn nhất");
+} else {
+    let max=array[0];
+    let index=0;
+    for (let i=0;i<10;i++){
+        for (let j=0;j<10;j++){
+            if (array[i] > max){
+                max = array[i];
+                index = i;
+            }
+        }
+    }
+    console.log(` Số lớn nhất là : ${max}`);
+    console.log(` Nằm ở vị trí số : ${index}`);
+}
+    </script>
+</body>
+</html>
